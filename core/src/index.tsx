@@ -13,7 +13,7 @@ export interface XMLReaderProps extends Omit<React.InputHTMLAttributes<HTMLInput
   encoding?: string;
   parserOptions?: X2jOptionsOptional;
   onError?: (error: Error) => void;
-  onFileLoaded: (data: unknown, fileInfo: IFileInfo, originalFile: File, text: string) => void;
+  onFileLoaded: (data: any, fileInfo: IFileInfo, originalFile: File, text: string) => void;
 }
 
 const XMLReader = forwardRef<HTMLInputElement, XMLReaderProps>((props, ref) => {
