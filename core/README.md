@@ -265,6 +265,10 @@ npm run build
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
+## Related
+
+- [@uiw/react-csv-reader](https://uiwjs.github.io/react-csv-reader) React component that handles csv file input and its parsing.
+
 ## Contributors
 
 As always, thanks to our amazing contributors!
