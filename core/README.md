@@ -30,7 +30,7 @@ import JsonView from '@uiw/react-json-view';
 import { lightTheme } from '@uiw/react-json-view/light';
 
 export default function Demo() {
-  const [value, setValue] = useState([]);
+  const [value, setValue] = useState();
   return (
     <React.Fragment>
       <XMLReader
@@ -38,7 +38,7 @@ export default function Demo() {
           setValue(data);
         }}
       />
-      {value && value.length > 0 && (
+      {value && (
         <JsonView
           keyName="data"
           value={value}

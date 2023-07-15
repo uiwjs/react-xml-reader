@@ -30,7 +30,7 @@ root.render(
     source={data.source}
     components={data.components}
     data={data.data}
-    title="XML View for React"
+    title="XML Reader for React"
     description="React component that handles xml file input and its parsing."
     version={`v${VERSION}`}
   >
