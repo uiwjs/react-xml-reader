@@ -1,8 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import '@wcj/dark-mode';
-import App from './App';
 import { glob, setup } from 'goober';
+import MarkdownPreviewExample from '@uiw/react-markdown-preview-example';
+import data from '@uiw/react-xml-reader/README.md';
+import App from './App';
 
 setup(React.createElement);
 
@@ -19,16 +20,23 @@ glob`
   }
 `;
 
+const Github = MarkdownPreviewExample.Github;
+const Example = MarkdownPreviewExample.Example;
+
 const container = document.getElementById('root');
 const root = createRoot(container!);
 root.render(
-  <React.Fragment>
-    <dark-mode
-      permanent
-      dark="Dark"
-      light="Light"
-      style={{ position: 'fixed', top: 8, left: 12, zIndex: 99, fontSize: 32 }}
-    />
-    <App />
-  </React.Fragment>,
+  <MarkdownPreviewExample
+    source={data.source}
+    components={data.components}
+    data={data.data}
+    title="XML View for React"
+    description="React component that handles xml file input and its parsing."
+    version={`v${VERSION}`}
+  >
+    <Github href="https://github.com/uiwjs/react-json-view" />
+    <Example>
+      <App />
+    </Example>
+  </MarkdownPreviewExample>
 );
