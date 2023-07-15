@@ -34,7 +34,7 @@ root.render(
     description="React component that handles xml file input and its parsing."
     version={`v${VERSION}`}
   >
-    <Github href="https://github.com/uiwjs/react-json-view" />
+    <Github href="https://github.com/uiwjs/react-xml-reader" />
     <Example>
       <App />
     </Example>
